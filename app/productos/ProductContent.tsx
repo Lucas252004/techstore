@@ -57,7 +57,7 @@ export default function Productos() {
           placeholder="Buscar productos..."
           value={busqueda}
           onChange={(e) => setBusqueda(e.target.value)}
-          className="w-full pl-11 pr-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+          className="w-full pl-11 pr-4 py-3 border border-gray-00 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-black"
         />
         {busqueda && (
           <button
