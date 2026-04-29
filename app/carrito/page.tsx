@@ -54,9 +54,12 @@ export default function Carrito() {
           <span className="text-gray-600">Subtotal ({totalItems} productos)</span>
           <span className="font-bold text-xl text-gray-800">${totalPrecio.toLocaleString()}</span>
         </div>
-        <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-          Finalizar compra
-        </button>
+        <Link
+          href="/checkout"
+          className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
+        >
+          Finalizar compra →
+        </Link>
         <Link href="/productos" className="block text-center text-gray-500 text-sm mt-3 hover:text-gray-700">
           ← Seguir comprando
         </Link>

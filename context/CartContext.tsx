@@ -9,6 +9,7 @@ type CartContextType = {
   carrito: ItemCarrito[]
   agregarAlCarrito: (producto: Producto) => void
   eliminarDelCarrito: (id: number) => void
+  limpiarCarrito: () => void
   totalItems: number
   totalPrecio: number
 }
@@ -18,6 +19,7 @@ const CartContext = createContext<CartContextType | null>(null)
 export function CartProvider({ children }: { children: ReactNode }) {
   const [carrito, setCarrito] = useState<ItemCarrito[]>([])
   const [cargado, setCargado] = useState(false)
+  const limpiarCarrito = () => setCarrito([])
 
   // Cargar desde localStorage al iniciar
   useEffect(() => {
@@ -60,7 +62,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const totalPrecio = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0)
 
   return (
-    <CartContext.Provider value={{ carrito, agregarAlCarrito, eliminarDelCarrito, totalItems, totalPrecio }}>
+    <CartContext.Provider value={{ carrito, agregarAlCarrito, eliminarDelCarrito, limpiarCarrito, totalItems, totalPrecio }}>
       {children}
     </CartContext.Provider>
   )
