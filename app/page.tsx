@@ -6,7 +6,7 @@ import Carrusel from "@/components/Carrusel"
 const servicios = [
   { icono: "🔧", titulo: "Pantallas rotas", descripcion: "Reemplazo en 24hs con garantía" },
   { icono: "🔋", titulo: "Batería", descripcion: "Cambio express mismo día" },
-  { icono: "💧", titulo: "Daño por agua", descripcion: "Diagnóstico gratuito" },
+  { icono: "💧", titulo: "Daño por agua", descripcion: "Diagnóstico de confianza" },
   { icono: "📷", titulo: "Cámara", descripcion: "Reparación de lente y sensor" },
 ]
 const resenas = [
